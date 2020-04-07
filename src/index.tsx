@@ -9,7 +9,7 @@ import Login from './components/Login/Login';
 const routing = (
   <Router>
     <div>
-      <Route exact path="/" component={Dashboard} />
+      <Route exact path="/" component={Login} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/login" component={Login} />
     </div>

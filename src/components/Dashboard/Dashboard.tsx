@@ -6,7 +6,7 @@ export default function Dashboard() {
     return (
         <React.Fragment>
             <Header></Header>
-            <h1>Hello Dashboard</h1>
+            <h1>You were successfully able to route to dashboard</h1>
             <Footer></Footer>
         </React.Fragment>
     );
