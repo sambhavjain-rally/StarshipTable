@@ -1,0 +1,39 @@
+  .starshipTableContainer {
+    background-color: #ece6e6;
+    padding: 5px;
+  }
+   
+  
+  .starshipTable {
+    border: solid #aeaeae 1px;
+    width: 100%;
+    border-collapse:collapse;
+  }
+   
+  .starshipTable tr:first-child {
+    font-weight: bold;
+    background-color: #cccccc;
+    height: 40px;
+    cursor: pointer;
+  }
+  .starshipTable tr:nth-child(even) {
+    background-color: #FFF;
+  }
+  .starshipTable td {
+    text-align: center;
+  }
+  .starshipTable td:last-child {
+    cursor: pointer;
+    color: #9bbec2;
+    font-weight: bold;
+  }
+   
+  .searchSymbol {
+    -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  display: inline-block;
+  font-size: 30px;
+  }

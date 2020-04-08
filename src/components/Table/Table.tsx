@@ -19,8 +19,8 @@ interface ITableData {
 export default function Table(props: ITableData) {
 
     return (
-        <React.Fragment>
-            <table>
+        <div className="starshipTableContainer">
+            <table className="starshipTable">
                 <tr>
                     {props.columns.map((column) =>
                         <th key={column.id}>
@@ -37,8 +37,7 @@ export default function Table(props: ITableData) {
                         )}
                     </tr>
                 )}
-
             </table>
-        </React.Fragment>
+        </div>
     );
 }
