@@ -9,28 +9,32 @@ const data = [{
     "last_name": "Penddreth",
     "email": "jpenddreth0@census.gov",
     "gender": "Female",
-    "dob": "10/04/1992"
+    "dob": "10/04/1992",
+    "description": "This is the description of expanded row"
 }, {
     "id": 2,
     "first_name": "Giavani",
     "last_name": "Frediani",
     "email": "gfrediani1@senate.gov",
     "gender": "Male",
-    "dob": "22/08/1993"
+    "dob": "22/08/1993",
+    "description": "This is the description of expanded row"
 }, {
     "id": 3,
     "first_name": "Noell",
     "last_name": "Bea",
     "email": "nbea2@imageshack.us",
     "gender": "Female",
-    "dob": "07/12/1987"
+    "dob": "07/12/1987",
+    "description": "This is the description of expanded row"
 }, {
     "id": 4,
     "first_name": "Willard",
     "last_name": "Valek",
     "email": "wvalek3@vk.com",
     "gender": "Male",
-    "dob": "13/05/1980"
+    "dob": "13/05/1980",
+    "description": "This is the description of expanded row"
 }];
 
 const columns = [{ id: "id", name: "Id", isSortable: true, isSearchable: true, searchType: "numeric" },

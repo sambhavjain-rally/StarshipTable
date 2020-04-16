@@ -10,7 +10,7 @@
     border-collapse:collapse;
   }
    
-  .starshipTable tr:first-child {
+  .starshipTable thead tr {
     font-weight: bold;
     background-color: #cccccc;
     height: 40px;
