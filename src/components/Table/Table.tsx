@@ -125,6 +125,10 @@ export default function Table(props: ITableData) {
     }
     function doSearch(searchStringParam: string) {
         setSearchString(searchStringParam);
+        let myData = props.data.filter(function (item) {
+            return item[searchItem.columnId].indexOf(searchStringParam) > -1;
+        });
+        console.log(myData);
     }
 
     // expansion
