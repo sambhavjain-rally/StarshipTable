@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Table.scss';
 import SearchDecorator, { ISearchItem } from './SearchDecorator';
+import { string } from 'prop-types';
 
 interface IColumnProperties {
     id: string,
@@ -105,18 +106,25 @@ export default function Table(props: ITableData) {
                     setSortColumnState(column.id, column.isSortable);
                 }}>{getColumnTitle(column)}
                 </span>
-                {column.isSearchable && <SearchDecorator searchItem={searchItem} columnId={column.id} searchType={column.searchType} showSearch={showSearch} closeSearch={closeSearch}></SearchDecorator>}
-            </th>
+                {column.isSearchable && <SearchDecorator searchItem={searchItem} columnId={column.id} searchType={column.searchType} searchString={searchString} showSearch={showSearch} doSearch={doSearch} closeSearch={closeSearch}></SearchDecorator>}
+            </th >
         );
     }
 
     // search
-    const [searchItem, setSearchItem] = useState<ISearchItem>({ isSearching: false, searchString: "", columnId: "" });
-    function showSearch(searchString: string, columnId: string, searchType?: string) {
-        setSearchItem({ isSearching: true, searchString: searchString, columnId: columnId });
+    const [searchItem, setSearchItem] = useState<ISearchItem>({ isSearching: false, columnId: "" });
+    const [searchString, setSearchString] = useState<string>("");
+
+    function showSearch(columnId: string, searchType?: string) {
+        setSearchString("");
+        setSearchItem({ isSearching: true, columnId: columnId });
     }
     function closeSearch() {
-        setSearchItem({ isSearching: false, searchString: "", columnId: "" });
+        setSearchItem({ isSearching: false, columnId: "" });
+        setSearchString("");
+    }
+    function doSearch(searchStringParam: string) {
+        setSearchString(searchStringParam);
     }
 
     // expansion
