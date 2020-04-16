@@ -41,7 +41,7 @@ const columns = [{ id: "id", name: "Id", isSortable: true, isSearchable: true, s
 { id: "first_name", name: "First Name", isSortable: true, isSearchable: true, searchType: "text" },
 { id: "last_name", name: "Last Name", isSortable: true, isSearchable: true, searchType: "text" },
 { id: "email", name: "Email Id", isSortable: true, isSearchable: true, searchType: "text" },
-{ id: "gender", name: "Gender", isSortable: true, isSearchable: false },
+{ id: "gender", name: "Gender", isSortable: false, isSearchable: false },
 { id: "dob", name: "DOB", isSortable: true, isSearchable: true, searchType: "date" },
 ]
 
