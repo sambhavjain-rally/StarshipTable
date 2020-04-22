@@ -36,14 +36,14 @@ export default function Table(props: ITableData) {
         state: SortState,
     }
     const [sortcolumn, setSortColumn] = useState<ISortColumn>(defaultSortColumn);
-    const data = props.data.slice();
+    let bindedData = props.data.slice();
 
     function sortData(field: string) {
         if (field === defaultSortColumn.column || SortState.noSort === sortcolumn.state) {
             return props.data;
         } else {
             let sortResult = sortcolumn.state === SortState.asc ? 1 : -1;
-            return data.sort((a, b) => {
+            return bindedData.sort((a, b) => {
                 if (a[field] > b[field]) {
                     return sortResult;
                 }
@@ -125,10 +125,10 @@ export default function Table(props: ITableData) {
     }
     function doSearch(searchStringParam: string) {
         setSearchString(searchStringParam);
-        let myData = props.data.filter(function (item) {
+        bindedData = bindedData.filter(function (item) {
             return item[searchItem.columnId].indexOf(searchStringParam) > -1;
         });
-        console.log(myData);
+        console.log(bindedData);
     }
 
     // expansion
