@@ -13,6 +13,7 @@ export default function TextSearch() {
             <TextField
                 id="input-with-icon-textfield"
                 label="Search Field"
+                
                 InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">
